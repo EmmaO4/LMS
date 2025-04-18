@@ -1,0 +1,20 @@
+Store book information into LMS.txt w/o overwriting
+    check if information is the same:
+        if so, add only the new data
+Add book constaints 
+Function implementation
+    main.search_by_title
+    main.search_by_author
+    library.remove_book
+    library.search_author
+Implement abstract.py for abstract data structure use
+    Implement ADTs (BST, )
+    learn implementation
+Implement "physical"/"digital" string when writing format data when typing "p" or "d" 
+    same thing for storage locations "S1" = "Shelf 1" 
+Keep track of books at home 
+
+FIXED:
+    # now reads file data correctly
+    main.display_books
+        currenly prints only the hardcoded data 

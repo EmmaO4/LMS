@@ -1,0 +1,3 @@
+4.4.25
+    AI implemented library.display_books() & library.load_data()
+    Added library.book_count & main.count_books() to troubleshoot file saving 
