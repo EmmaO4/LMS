@@ -4,12 +4,12 @@ This strict OOP system will store all my current literary pieces scattered aroun
 Files summary:
 
 1. main.py
-    This will be the entry point of your application.
+    This will be the entry point of the application.
 
-    It will handle the main menu and user interactions -- adding, updating, deleting, or searching for books.
+    It handles the main menu and user interactions -- adding, updating, deleting, or searching for books.
 
 2. book.py
-    This file will define the Book class.
+    This file will define Book class.
 
     The class will store attributes like title, author, ISBN, publication year, format (physical/digital), and any other relevant details.
 
