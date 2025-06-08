@@ -1,3 +1,9 @@
 4.4.25
     implemented library.display_books() & library.load_data()
     Added library.book_count & main.count_books() to troubleshoot file saving 
+4.15.25
+    added constraints to book.set_title(), book.set_author(), book.set_isbn(), book.set_publication_year(), book.set_genre(), book.set_format(), book.set_storage_loc().
+4.29.25
+    created save states for working with forked codebases on local machine.
+5.20.25
+    CSUS finals and projects -- been busy, read TODO for inspiration
