@@ -1,4 +1,4 @@
-The following is R1's work:
+Files summary:
 
 1. main.py
     This will be the entry point of your application.
