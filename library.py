@@ -51,16 +51,19 @@ class Library:
         try:
             with open(filename, "r") as file:
                 content = file.read().strip()
+                content = content.replace("\r\n", "\n").replace("\r", "\n")
+
                 if not content:
+                    print("DEBUG: LMS.txt is empty.")
                     return
-                
+
                 book_entries = content.split("\n\n")
-                
+                print(f"DEBUG: Found {len(book_entries)} entries in LMS.txt")
+
                 for entry in book_entries:
                     if not entry.strip():
                         continue
-                    
-                    # Initialize book attributes with None
+
                     book_attrs = {
                         'title': None,
                         'author': None,
@@ -70,22 +73,26 @@ class Library:
                         'format': None,
                         'storage_loc': None
                     }
-                    
-                    # Parse each line of the book entry
+
+                    print(f"\nDEBUG: Raw entry:\n{entry}")
+
                     for line in entry.split("\n"):
                         if ": " in line:
                             key, value = line.split(": ", 1)
                             key = key.lower().replace(" ", "_")
+                            # Normalize alternate field names
+                            key_aliases = {
+                                "storage_location": "storage_loc"
+                            }
+                            key = key_aliases.get(key, key)  # remap if alias exists
                             if key in book_attrs:
-                                # Special handling for publication year (convert to int)
                                 if key == "publication_year":
                                     try:
                                         value = int(value)
                                     except ValueError:
                                         value = None
                                 book_attrs[key] = value
-                    
-                    # Check if all required attributes were found
+
                     if all(book_attrs.values()):
                         book = Book(
                             title=book_attrs['title'],
@@ -97,12 +104,13 @@ class Library:
                             storage_loc=book_attrs['storage_loc']
                         )
                         self.shelf.append(book)
+                        print(f"DEBUG: Loaded book: {book.get_title()} by {book.get_author()}")
                     else:
-                        continue
-                        #print(f"Skipping incomplete book entry: {entry[:50]}...")
-            
-            print(f"Successfully loaded {len(self.shelf)} books from {filename}")
+                        print(f"WARNING: Skipped book due to missing data: {book_attrs}")
+
+                print(f"\nSuccessfully loaded {len(self.shelf)} books from {filename}")
+
         except FileNotFoundError:
-            print(f"Warning: {filename} not found. Starting with empty library.")
+            print(f"WARNING: {filename} not found. Starting with an empty library.")
         except Exception as e:
-            print(f"Error loading books from {filename}: {str(e)}")
+            print(f"ERROR loading books: {str(e)}")
