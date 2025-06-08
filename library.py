@@ -18,14 +18,14 @@ class Library:
                 return
         print(f"Book with ISBN: {isbn} was not found.")
 
-    # learn return line
+    # learn 
     def search_title(self, title):
         return [book for book in self.shelf if title.lower() in book.get_title().lower()]
     
     def search_author(self, author):
         pass
 
-    #R1
+    #R
     def display_books(self, filename = "LMS.txt"):
         for i, book in enumerate(self.shelf, 1):
             print(f"\nBook #{i}")
@@ -46,7 +46,7 @@ class Library:
         with open(filename, "r") as file:
             print("\n" + file.read())
 
-    #R1: WTF is this 
+    #R
     def load_data(self, filename="LMS.txt"):
         try:
             with open(filename, "r") as file:
