@@ -63,7 +63,7 @@ class Book:
         self._storage_loc = storage_loc
 
     # display book information
-    # R1 did this part
+    # R
     def __str__(self):
         return (
             f"Title: {self.get_title()}\n"
