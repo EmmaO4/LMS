@@ -1,3 +1,6 @@
+This strict OOP system will store all my current literary pieces scattered around my home in various places, both physically or digitally, for ease of look up.
+
+
 Files summary:
 
 1. main.py
