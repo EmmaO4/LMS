@@ -1,0 +1,24 @@
+Title: 1984
+Author: George Orwell
+ISBN: 978-0451524935
+Publication Year: 1949
+Genre: Dystopian
+Format: p
+Storage Location: S1
+
+Title: Fake
+Author: Name
+ISBN: 1902384795
+Publication Year: 2012
+Genre: Horror
+Format: p
+Storage Location: S1
+
+Title: New 
+Author: Arthur
+ISBN: 902347-234730
+Publication Year: 2003
+Genre: Horror
+Format: p
+Storage Location: s1
+
