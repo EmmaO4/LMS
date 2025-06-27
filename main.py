@@ -32,22 +32,21 @@ def remove_book(library):
     library.remove_book(isbn)
 
 def search_by_title(library):
-    print("\nSearch Title")
-    title               = input("Search title: ")
-    results             = library.search_by_title(title)
+    title               = input("Search Title: ")
+    results             = library.search_title(title)
+        
     if results:
-        print("\nSearch Results:")
+        print("\nSEARCH RESULTS:")
         for book in results:
             print(book)
     else:
         print("No books found with that title.")
 
 def search_by_author(library):
-    print("\nSearch by author")
-    author              = input("Enter the author to search: ")
-    results             = library.search_by_author(author)
+    author              = input("Search Author: ")
+    results             = library.search_author(author)
     if results:
-        print("\nResults:")
+        print("\nRESULTS:")
         for book in results:
             print(book)
     else:
@@ -74,7 +73,7 @@ def main():
 
     while True:
         
-        select = input("Select: ")
+        select = input("MAIN SELECT: ")
 
         if select == "1":
             add_book(library)
@@ -95,7 +94,7 @@ def main():
             print("TERMINATED.\n")
             break
         else:
-            print("Invalid select")
+            print("Invalid Select")
 
 if __name__ == "__main__":
     main()
