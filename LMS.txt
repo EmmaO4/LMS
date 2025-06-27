@@ -14,6 +14,14 @@ Genre: Horror
 Format: p
 Storage Location: S1
 
+Title: Book Two
+Author: Author Two
+ISBN: 2222222222
+Publication Year: 2002
+Genre: Non-Fiction
+Format: d
+Storage Location: S2
+
 Title: New 
 Author: Arthur
 ISBN: 902347-234730
@@ -21,4 +29,12 @@ Publication Year: 2003
 Genre: Horror
 Format: p
 Storage Location: s1
+
+Title: New Fake
+Author: User
+ISBN: 129303-2834134
+Publication Year: 1922
+Genre: True Crime
+Format: p
+Storage Location: S1
 
