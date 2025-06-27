@@ -11,7 +11,7 @@ Implement abstract.py for abstract data structure use
 Keep track of books at home 
 
 *Currently Working On*:
-
+        Implement "physical"/"digital" string when writing format data when typing "p" or "d" 
 
 Completed:
     # now reads file data correctly
