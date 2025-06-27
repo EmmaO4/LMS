@@ -23,7 +23,7 @@ class Library:
         return [book for book in self.shelf if title.lower() in book.get_title().lower()]
     
     def search_author(self, author):
-        pass
+        return [book for book in self.shelf if author.lower() in book.get_author().lower()]
 
     #R
     def display_books(self, filename = "LMS.txt"):
