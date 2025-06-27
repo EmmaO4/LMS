@@ -27,9 +27,10 @@ def add_book(library):
     print(f"'{title}' has been added.")
 
 def remove_book(library):
-    print("\nRemove a Book")
-    isbn                = input("Enter the ISBN of the book to remove: ")
-    library.remove_book(isbn)
+    print("\nBooks in library:")
+    library.book_titles()
+    title                = input("Enter book title to remove: ")
+    library.remove_book(title)
 
 def search_by_title(library):
     title               = input("Search Title: ")
@@ -55,9 +56,11 @@ def search_by_author(library):
 def count_books(library):
     num_of_books        = library.book_count(Book)
     
+# read the file as is
 def read_file_main(library):
     library.read_file("LMS.txt")
 
+# reads library data contents
 def display_all_books(library):
     print("\nInventory: \n-------------")
     library.display_books()
