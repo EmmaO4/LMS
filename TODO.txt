@@ -1,25 +1,34 @@
-Add book constaints 
 Function implementation
     main.search_author
         returns an autofill of the first letter if in library.
         I want to return an autofill of all authors with the current input:
             Ex: type "g" return all "g%"
-    library.remove_book
-    library.search_author
 Implement "physical"/"digital" string when writing format data when typing "p" or "d" 
     same thing for storage locations "S1" = "Shelf 1" 
 Implement abstract.py for abstract data structure use
-    Implement ADTs (BST, )
+    Implement ADTs (BST, dictionary)
     learn implementation
 Keep track of books at home 
+
+*Currently Working On*:
+
 
 Completed:
     # now reads file data correctly
     main.display_books
-        currenly prints only the hardcoded data 
+        currently prints only the hardcoded data 
+
     # now stores information in LMS.txt file and loads data into shelf list correctly
     Store book information into LMS.txt w/o overwriting
     check if information is the same:
         if so, add only the new data
+
     # Successful implementation:
-        libarary.search_title
+        libaary.search_title
+        library.book_titles
+        library.remove_book
+    # constraints added
+    Add book constaints 
+    # now prints all book titles for at-a-glance removal when using main.remove_book method
+    main.remove_book
+        show a list of all book titles to easily see which one to remove
