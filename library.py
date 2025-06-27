@@ -10,13 +10,13 @@ class Library:
     def add_book(self, book):
         self.shelf.append(book)
 
-    def remove_book(self, isbn):
+    def remove_book(self, title):
         for book in self.shelf:
-            if book.get_isbn() == isbn:
+            if book.get_title() == title:
                 self.shelf.remove(book)
                 print(f"'{book.get_title()}' by {book.get_author()} has been removed from library.")
                 return
-        print(f"Book with ISBN: {isbn} was not found.")
+        print(f"Book with title: {title} was not found.")
 
     # learn 
     def search_title(self, title):
@@ -26,6 +26,7 @@ class Library:
         return [book for book in self.shelf if author.lower() in book.get_author().lower()]
 
     #R
+    # reads up-to-date library data contents before having to save
     def display_books(self, filename = "LMS.txt"):
         for i, book in enumerate(self.shelf, 1):
             print(f"\nBook #{i}")
@@ -42,9 +43,14 @@ class Library:
         count = len(self.shelf)
         print(f"Number of books in library: {count}")
 
+    # read file as is, will be outdated when modifying library
     def read_file(self, filename):
         with open(filename, "r") as file:
             print("\n" + file.read())
+
+    def book_titles(self):
+        for book in self.shelf:
+            print(book.get_title())
 
     #R
     def load_data(self, filename="LMS.txt"):
