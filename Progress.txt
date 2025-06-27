@@ -7,3 +7,8 @@
     created save states for working with forked codebases on local machine.
 5.20.25
     CSUS finals and projects -- been busy, read TODO for inspiration
+6.25.25
+    Successful implementation:
+        libarary.search_title
+    library.search_author = returns an autofilled input of user input from first letter. 
+    
