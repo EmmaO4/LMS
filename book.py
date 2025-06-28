@@ -67,7 +67,7 @@ class Book:
         return self._format
     
     def set_format(self, format):
-        if format not in ('p', 'd'):
+        if format != "p" or format != "d":
             raise ValueError("Format must be 'p' (physical) or 'd' (digital).")
         self._format = format
 
