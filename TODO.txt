@@ -2,17 +2,15 @@ Function implementation
     main.search_author
         returns an autofill of the first letter if in library.
         I want to return an autofill of all authors with the current input:
-            Ex: type "g" return all "g%"
-Implement "physical"/"digital" string when writing format data when typing "p" or "d" 
-    same thing for storage locations "S1" = "Shelf 1" 
+            Ex: type "g" return all "g%" 
 Implement abstract.py for abstract data structure use
     Implement ADTs (BST, dictionary)
     learn implementation
 Keep track of books at home 
-
+-----------
 *Currently Working On*:
-        Implement "physical"/"digital" string when writing format data when typing "p" or "d" 
 
+-----------
 Completed:
     # now reads file data correctly
     main.display_books
@@ -32,3 +30,7 @@ Completed:
     # now prints all book titles for at-a-glance removal when using main.remove_book method
     main.remove_book
         show a list of all book titles to easily see which one to remove
+    # now autofill and debugged after modifying. Bug was in book.py constaint for set_format.
+    Implement "physical"/"digital" string when writing format data when typing "p" or "d" 
+        Implement "physical"/"digital" string when writing format data when typing "p" or "d" 
+        same thing for storage locations "S1" = "Shelf 1"
