@@ -53,6 +53,7 @@ class Library:
             print(book.get_title())
 
     #R
+    # loads in all books and prints them to output for viewing
     def load_data(self, filename="LMS.txt"):
         try:
             with open(filename, "r") as file:
@@ -80,7 +81,7 @@ class Library:
                         'storage_loc': None
                     }
 
-                    print(f"\nDEBUG: Raw entry:\n{entry}")
+                    print(f"\nAuto Entry:\n{entry}")
 
                     for line in entry.split("\n"):
                         if ": " in line:

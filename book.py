@@ -67,7 +67,7 @@ class Book:
         return self._format
     
     def set_format(self, format):
-        if format not in ('p', 'd'):
+        if format not in ('p', 'd', 'Physical', 'Digital'):
             raise ValueError("Format must be 'p' (physical) or 'd' (digital).")
         self._format = format
 
@@ -82,12 +82,14 @@ class Book:
 
     # display book information
     def __str__(self):
+        format_display = "Physical" if self.get_format() == 'p' else "Digital"
+        storage_loc_display = "Shelf 1" if self.get_storage_loc() == 's1' else "Shelf 2"
         return (
             f"Title: {self.get_title()}\n"
             f"Author: {self.get_author()}\n"
             f"ISBN: {self.get_isbn()}\n"
             f"Publication Year: {self.get_publication_year()}\n"
             f"Genre: {self.get_genre()}\n"
-            f"Format: {self.get_format()}\n"
-            f"Storage Location: {self.get_storage_loc()}"
+            f"Format: {format_display}\n"
+            f"Storage Location: {storage_loc_display}"
         )
