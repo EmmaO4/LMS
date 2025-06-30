@@ -6,10 +6,11 @@ Function implementation
 Implement abstract.py for abstract data structure use
     Implement ADTs (BST, dictionary)
     learn implementation
-Keep track of books at home 
+Keep track of books at home
+Convert content storage to CSV file 
 -----------
 *Currently Working On*:
-
+    LMS now active -- will input all books in home for bookkeeping.
 -----------
 Completed:
     # now reads file data correctly

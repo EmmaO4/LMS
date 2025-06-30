@@ -14,4 +14,7 @@
 6.27.25
     Implemented:
         library.book_titles() to display all book titles in library for removal purposes.
-
+6.30.25
+    Implemented 'format' and 'storage location' crtieria autofill when adding books. 
+        book.set_format() now check if input is in bounds of given list 
+        book.__str__() now displays corrected autofill for criteria above when adding books to library.
