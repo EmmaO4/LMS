@@ -4,6 +4,7 @@ Function implementation
         I want to return an autofill of all authors with the current input:
             Ex: type "g" return all "g%" 
 Implement abstract.py for abstract data structure use
+    modify LMS.txt file contents = book attributes already in library
     Implement ADTs (BST, dictionary)
     learn implementation
 Keep track of books at home

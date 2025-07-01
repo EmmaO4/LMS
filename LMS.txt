@@ -1,80 +1,8 @@
-Title: 1984
-Author: George Orwell
-ISBN: 978-0451524935
-Publication Year: 1949
-Genre: Dystopian
-Format: Digital
-Storage Location: Shelf 2
-
-Title: Fake
-Author: Name
-ISBN: 1902384795
-Publication Year: 2012
-Genre: Horror
-Format: Digital
-Storage Location: Shelf 2
-
-Title: Book Two
-Author: Author Two
-ISBN: 2222222222
-Publication Year: 2002
-Genre: Non-Fiction
-Format: Digital
-Storage Location: Shelf 2
-
-Title: New 
-Author: Arthur
-ISBN: 902347-234730
-Publication Year: 2003
-Genre: Horror
-Format: Digital
-Storage Location: Shelf 1
-
-Title: New Fake
-Author: User
-ISBN: 129303-2834134
-Publication Year: 1922
-Genre: True Crime
-Format: Digital
-Storage Location: Shelf 2
-
-Title: Three
-Author: tree
-ISBN: 234989324832
-Publication Year: 2001
-Genre: History
-Format: Digital
-Storage Location: Shelf 1
-
-Title: Yiom
-Author: Suff
-ISBN: 9039203847320
-Publication Year: 2000
-Genre: History
-Format: Digital
-Storage Location: Shelf 1
-
-Title: Cat Story
-Author: Bob Glenn
-ISBN: 3408372920173
-Publication Year: 2017
-Genre: Horror
-Format: Digital
-Storage Location: Shelf 2
-
-Title: Birds
-Author: John 
-ISBN: 290348470221
-Publication Year: 2014
-Genre: Biography
-Format: Digital
-Storage Location: Shelf 2
-
-Title: Johnny Appleseed
-Author: Hancock
-ISBN: 2903470134732
-Publication Year: 1988
-Genre: Fiction
+Title: Waiting for God
+Author: Simone Weil
+ISBN: 978-0-06-171896-0
+Publication Year: 1950
+Genre: Philosophy
 Format: Physical
-Storage Location: Shelf 1
+Storage Location: Shelf 2
 
