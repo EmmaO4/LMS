@@ -8,6 +8,7 @@ Implement abstract.py for abstract data structure use
     learn implementation
 Keep track of books at home
 Convert content storage to CSV file 
+Implement SQL DB for storage and proper bookkeeping
 -----------
 *Currently Working On*:
     LMS now active -- will input all books in home for bookkeeping.
