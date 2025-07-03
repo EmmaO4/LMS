@@ -1,5 +1,3 @@
-from datetime import datetime
-
 # this file holds physical (p) or digital (d) book information
 # class attrs: title. author, ISBN, publication year, genre, format (p/d), storage location
 
