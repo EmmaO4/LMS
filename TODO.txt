@@ -10,9 +10,11 @@ Implement abstract.py for abstract data structure use
 Keep track of books at home
 Convert content storage to CSV file 
 Implement SQL DB for storage and proper bookkeeping
+    choose a DB, maybe SQLite
 -----------
 *Currently Working On*:
     LMS now active -- will input all books in home for bookkeeping.
+    reformat LMS.txt to LMS.csv for data parsing for future DB implementation
 -----------
 Completed:
     # now reads file data correctly

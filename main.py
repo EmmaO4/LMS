@@ -29,13 +29,12 @@ def add_book(library):
 def remove_book(library):
     print("\nBooks in library:")
     library.book_titles()
-    title                = input("Enter book title to remove: ")
+    title = input("Enter book title to remove: ")
     library.remove_book(title)
 
 def search_by_title(library):
-    title               = input("Search Title: ")
-    results             = library.search_title(title)
-        
+    title = input("Search Title: ")
+    results = library.search_title(title)
     if results:
         print("\nSEARCH RESULTS:")
         for book in results:
@@ -44,8 +43,8 @@ def search_by_title(library):
         print("No books found with that title.")
 
 def search_by_author(library):
-    author              = input("Search Author: ")
-    results             = library.search_author(author)
+    author = input("Search Author: ")
+    results = library.search_author(author)
     if results:
         print("\nRESULTS:")
         for book in results:
@@ -54,30 +53,21 @@ def search_by_author(library):
         print("No books found by that author.")
 
 def count_books(library):
-    num_of_books        = library.book_count(Book)
-    
-# read the file as is
-def read_file_main(library):
-    library.read_file("LMS.txt")
+    library.book_count()
 
-# reads library data contents
+def read_file_main(library):
+    library.read_file("LMS.csv")
+
 def display_all_books(library):
     print("\nInventory: \n-------------")
     library.display_books()
 
-
 def main():
-    library = Library()  # Create a library instance
-
-    #book1 = Book("1984", "George Orwell", "978-0451524935", 1949, "Dystopian", "p", "S1")
-    #library.add_book(book1)
-
+    library = Library()
     display_menu()
 
     while True:
-        
         select = input("MAIN SELECT: ")
-
         if select == "1":
             add_book(library)
         elif select == "2":
