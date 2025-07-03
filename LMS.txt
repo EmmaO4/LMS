@@ -3,6 +3,78 @@ Author: Simone Weil
 ISBN: 978-0-06-171896-0
 Publication Year: 1950
 Genre: Philosophy
+Format: Digital
+Storage Location: Shelf 2
+
+Title: A Random Walk Down Wall Street
+Author: Burton G. Malkiel
+ISBN: 978-0-393-35838-4
+Publication Year: 1973
+Genre: Reference Work
+Format: Digital
+Storage Location: Shelf 2
+
+Title: Personal Investing
+Author: Wilbur W. Widicus & Thomas E. Stitzel
+ISBN: 0-256-01832-4
+Publication Year: 1971
+Genre: Reference Work
+Format: Digital
+Storage Location: Shelf 2
+
+Title: The Myth of Sisyphus
+Author: Albert Camus
+ISBN: 978-0-525-56445-4
+Publication Year: 1942
+Genre: Philosophy
+Format: Digital
+Storage Location: Shelf 2
+
+Title: The Plague
+Author: Albert Camus
+ISBN: 0-679-72021-9
+Publication Year: 1947
+Genre: Philosophy
+Format: Digital
+Storage Location: Shelf 2
+
+Title: The Design of Everyday Things
+Author: Don Norman
+ISBN: 978-0-465-05065-9
+Publication Year: 1988
+Genre: Psychology
+Format: Digital
+Storage Location: Shelf 2
+
+Title: Operating Systems Three Easy Pieces
+Author: Remzi H. Arpaci-Dusseau Andrea C. Arpaci-Dusseau
+ISBN: 978-1985086593
+Publication Year: 2012
+Genre: Computer Science
+Format: Digital
+Storage Location: Shelf 2
+
+Title: Learn Python the Hard Way Fifth Edition
+Author: Zed A. Shaw
+ISBN: 978-0-13-827057-5
+Publication Year: 2024
+Genre: Computer Science
+Format: Digital
+Storage Location: Shelf 2
+
+Title: Principles of Programming Languages Design, Evaluation, and Implementation Third Edition
+Author: Bruce J. Maclennan
+ISBN: 0-19-511306-3
+Publication Year: 1999
+Genre: Computer Science
+Format: Digital
+Storage Location: Shelf 2
+
+Title: Introduction to Java Programming Comprehensive version 10th Edition
+Author: Y. Daniel Liang
+ISBN: 978-0-13-376131-3
+Publication Year: 2014
+Genre: Computer Science
 Format: Physical
 Storage Location: Shelf 2
 
