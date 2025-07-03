@@ -1,5 +1,6 @@
-# this file stores book info into a txt file using lists
+# this file stores book info into a csv file using lists
 from book import Book
+import csv
 
 class Library:
 
@@ -18,105 +19,67 @@ class Library:
                 return
         print(f"Book with title: {title} was not found.")
 
-    # learn 
     def search_title(self, title):
         return [book for book in self.shelf if title.lower() in book.get_title().lower()]
     
     def search_author(self, author):
         return [book for book in self.shelf if author.lower() in book.get_author().lower()]
 
-    #R
-    # reads up-to-date library data contents before having to save
-    def display_books(self, filename = "LMS.txt"):
+    def display_books(self, filename="LMS.csv"):
         for i, book in enumerate(self.shelf, 1):
             print(f"\nBook #{i}")
             print(book)
             print("-" * 30)
 
-    def save_to_file(self, filename = "LMS.txt"):
-        with open(filename, "w") as file:
+    def save_to_file(self, filename="LMS.csv"):
+        with open(filename, "w", newline='') as csvfile:
+            writer = csv.writer(csvfile)
+            writer.writerow(["Title", "Author", "ISBN", "Publication Year", "Genre", "Format", "Storage Location"])
             for book in self.shelf:
-                file.write(str(book) + "\n\n")  # Write each book's details to the file
+                writer.writerow([
+                    book.get_title(),
+                    book.get_author(),
+                    book.get_isbn(),
+                    book.get_publication_year(),
+                    book.get_genre(),
+                    book.get_format(),
+                    book.get_storage_loc()
+                ])
         print(f"Library data saved to {filename}.")
 
-    def book_count(self, book):
+    def book_count(self):
         count = len(self.shelf)
         print(f"Number of books in library: {count}")
 
-    # read file as is, will be outdated when modifying library
-    def read_file(self, filename):
-        with open(filename, "r") as file:
-            print("\n" + file.read())
+    def read_file(self, filename="LMS.csv"):
+        try:
+            with open(filename, newline='') as csvfile:
+                reader = csv.reader(csvfile)
+                for row in reader:
+                    print(', '.join(row))
+        except FileNotFoundError:
+            print(f"File {filename} not found.")
 
     def book_titles(self):
         for book in self.shelf:
             print(book.get_title())
 
-    #R
-    # loads in all books and prints them to output for viewing
-    def load_data(self, filename="LMS.txt"):
+    def load_data(self, filename="LMS.csv"):
         try:
-            with open(filename, "r") as file:
-                content = file.read().strip()
-                content = content.replace("\r\n", "\n").replace("\r", "\n")
-
-                if not content:
-                    print("DEBUG: LMS.txt is empty.")
-                    return
-
-                book_entries = content.split("\n\n")
-                print(f"DEBUG: Found {len(book_entries)} entries in LMS.txt")
-
-                for entry in book_entries:
-                    if not entry.strip():
-                        continue
-
-                    book_attrs = {
-                        'title': None,
-                        'author': None,
-                        'isbn': None,
-                        'publication_year': None,
-                        'genre': None,
-                        'format': None,
-                        'storage_loc': None
-                    }
-
-                    print(f"\nAuto Entry:\n{entry}")
-
-                    for line in entry.split("\n"):
-                        if ": " in line:
-                            key, value = line.split(": ", 1)
-                            key = key.lower().replace(" ", "_")
-                            # Normalize alternate field names
-                            key_aliases = {
-                                "storage_location": "storage_loc"
-                            }
-                            key = key_aliases.get(key, key)  # remap if alias exists
-                            if key in book_attrs:
-                                if key == "publication_year":
-                                    try:
-                                        value = int(value)
-                                    except ValueError:
-                                        value = None
-                                book_attrs[key] = value
-
-                    if all(book_attrs.values()):
-                        book = Book(
-                            title=book_attrs['title'],
-                            author=book_attrs['author'],
-                            isbn=book_attrs['isbn'],
-                            publication_year=book_attrs['publication_year'],
-                            genre=book_attrs['genre'],
-                            format=book_attrs['format'],
-                            storage_loc=book_attrs['storage_loc']
-                        )
-                        self.shelf.append(book)
-                        print(f"DEBUG: Loaded book: {book.get_title()} by {book.get_author()}")
-                    else:
-                        print(f"WARNING: Skipped book due to missing data: {book_attrs}")
-
-                print(f"\nSuccessfully loaded {len(self.shelf)} books from {filename}")
-
+            with open(filename, newline='') as csvfile:
+                reader = csv.DictReader(csvfile)
+                for row in reader:
+                    book = Book(
+                        title=row["Title"],
+                        author=row["Author"],
+                        isbn=row["ISBN"],
+                        publication_year=int(row["Publication Year"]),
+                        genre=row["Genre"],
+                        format=row["Format"],
+                        storage_loc=row["Storage Location"]
+                    )
+                    self.shelf.append(book)
+            print(f"Successfully loaded {len(self.shelf)} books from {filename}.")
         except FileNotFoundError:
             print(f"WARNING: {filename} not found. Starting with an empty library.")
         except Exception as e:
