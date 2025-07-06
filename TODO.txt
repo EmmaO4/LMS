@@ -14,7 +14,7 @@ Implement SQL DB for storage and proper bookkeeping
 -----------
 *Currently Working On*:
     LMS now active -- will input all books in home for bookkeeping.
-    reformat LMS.txt to LMS.csv for data parsing for future DB implementation
+    Implementing SQLite DB
 -----------
 Completed:
     # now reads file data correctly
@@ -39,3 +39,5 @@ Completed:
     Implement "physical"/"digital" string when writing format data when typing "p" or "d" 
         Implement "physical"/"digital" string when writing format data when typing "p" or "d" 
         same thing for storage locations "S1" = "Shelf 1"
+    # now formatted for sql implementation using csv files
+    reformat LMS.txt to LMS.csv for data parsing for future DB implementation
