@@ -18,3 +18,9 @@
     Implemented 'format' and 'storage location' crtieria autofill when adding books. 
         book.set_format() now check if input is in bounds of given list 
         book.__str__() now displays corrected autofill for criteria above when adding books to library.
+7.8.25
+    Missed some days to add to this report -- Summary:
+        LMS live 
+        converted LMS.txt file and fomatting to LMS.csv file formatting for easier db plugin 
+        currently implemented/ learning SQLite3 for vscode
+        setting up db  

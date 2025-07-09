@@ -1,3 +1,5 @@
+LMS NOW ACTIVE -- will input all books in home for bookkeeping.
+
 Function implementation
     main.search_author
         returns an autofill of the first letter if in library.
@@ -13,8 +15,9 @@ Implement SQL DB for storage and proper bookkeeping
     choose a DB, maybe SQLite
 -----------
 *Currently Working On*:
-    LMS now active -- will input all books in home for bookkeeping.
+
     Implementing SQLite DB
+        Debug: csv_to_db.py script execution
 -----------
 Completed:
     # now reads file data correctly
