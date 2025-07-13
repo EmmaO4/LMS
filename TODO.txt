@@ -1,6 +1,6 @@
 LMS NOW ACTIVE -- will input all books in home for bookkeeping.
 
-Function implementation
+Function implementation (stuff to fix)
     main.search_author
         returns an autofill of the first letter if in library.
         I want to return an autofill of all authors with the current input:
@@ -10,14 +10,14 @@ Implement abstract.py for abstract data structure use
     Implement ADTs (BST, dictionary)
     learn implementation
 Keep track of books at home
-Convert content storage to CSV file 
-Implement SQL DB for storage and proper bookkeeping
-    choose a DB, maybe SQLite
+
 -----------
 *Currently Working On*:
 
     Implementing SQLite DB
-        Debug: csv_to_db.py script execution
+        Debug: csv_to_db.py script execution -- prob input manually 
+    Implement SQL DB for storage and proper bookkeeping
+    choose a DB, maybe SQLite
 -----------
 Completed:
     # now reads file data correctly
@@ -44,3 +44,4 @@ Completed:
         same thing for storage locations "S1" = "Shelf 1"
     # now formatted for sql implementation using csv files
     reformat LMS.txt to LMS.csv for data parsing for future DB implementation
+    Convert content storage to CSV file 
