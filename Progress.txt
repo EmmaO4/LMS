@@ -24,3 +24,6 @@
         converted LMS.txt file and fomatting to LMS.csv file formatting for easier db plugin 
         currently implemented/ learning SQLite3 for vscode
         setting up db  
+7.12.25
+    Aborting script csv_to_db -- Starting over with SQLite: manually inputted tables in placeholder file: books_data.sql
+    Was able to post output on SQLite table by running query on books relation

@@ -11,3 +11,8 @@ CREATE TABLE books (
     format TEXT CHECK(format IN ('p', 'd', 'Physical', 'Digital')) NOT NULL,
     storage_location TEXT NOT NULL
 );
+
+INSERT INTO books (title, author, isbn, publication_year, genre, format, storage_location) VALUES
+('Waiting for God', 'Simone Weil', '978-0-06-171896-0', 1950, 'Philosophy', 'Digital', 'Shelf 2');
+
+SELECT * FROM books;

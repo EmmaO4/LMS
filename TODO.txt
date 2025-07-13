@@ -16,8 +16,9 @@ Keep track of books at home
 
     Implementing SQLite DB
         Debug: csv_to_db.py script execution -- prob input manually 
-    Implement SQL DB for storage and proper bookkeeping
-    choose a DB, maybe SQLite
+        figure out what the unknown characters are being created in db.db 
+        look into database (primary ... etc) keys, constraints ...
+    
 -----------
 Completed:
     # now reads file data correctly
@@ -45,3 +46,6 @@ Completed:
     # now formatted for sql implementation using csv files
     reformat LMS.txt to LMS.csv for data parsing for future DB implementation
     Convert content storage to CSV file 
+    # SQLite successfully ran and created test table with constaint
+    Implement SQL DB for storage and proper bookkeeping
+    choose a DB, maybe SQLite
