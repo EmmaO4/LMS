@@ -27,3 +27,8 @@
 7.12.25
     Aborting script csv_to_db -- Starting over with SQLite: manually inputted tables in placeholder file: books_data.sql
     Was able to post output on SQLite table by running query on books relation
+
+7.18.25
+    SQLite DB is active when using books_data.sql -> run insert functions > comment out INSERTs and run SELECT
+    mysql.sql is redundant 
+    Performed queries to test DB

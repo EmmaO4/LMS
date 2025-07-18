@@ -13,7 +13,7 @@ Keep track of books at home
 
 -----------
 *Currently Working On*:
-
+    Normalize DB 
     Implementing SQLite DB
         Debug: csv_to_db.py script execution -- prob input manually 
         figure out what the unknown characters are being created in db.db 
@@ -49,3 +49,4 @@ Completed:
     # SQLite successfully ran and created test table with constaint
     Implement SQL DB for storage and proper bookkeeping
     choose a DB, maybe SQLite
+    # DB is implemented and now executes when running books.sql query
