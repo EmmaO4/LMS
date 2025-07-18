@@ -10,6 +10,7 @@ Implement abstract.py for abstract data structure use
     Implement ADTs (BST, dictionary)
     learn implementation
 Keep track of books at home
+Comment functions for ease of readability
 
 -----------
 *Currently Working On*:
