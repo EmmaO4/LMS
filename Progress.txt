@@ -32,3 +32,11 @@
     SQLite DB is active when using books_data.sql -> run insert functions > comment out INSERTs and run SELECT
     mysql.sql is redundant 
     Performed queries to test DB
+
+7.26.25
+    Corrected CSV file for entry id = 12, shelf = 1
+    Updated TDDO to include a modify method when needing to modify an aspect of the data saved
+    Removed unecessary mysql.sql file used to practicing
+    Added comments - library.py, book.py, main.py where necessary
+    Updated README
+    Implemented method library.modify

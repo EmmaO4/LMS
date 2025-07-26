@@ -36,6 +36,7 @@ class Book:
     def get_isbn(self):
         return self._isbn
     
+    # constraint: must be digit between 10-13 digits. auto removes hyphens   
     def set_isbn(self, isbn):
         if not isinstance(isbn, str) or not isbn.replace("-", "").isdigit() or not (10 <= len(isbn.replace("-", "")) <= 13):
             raise ValueError("ISBN must be a string of 10 to 13 digits.")
@@ -45,6 +46,7 @@ class Book:
     def get_publication_year(self):
         return self._publication_year
     
+    # pub year constaint checking for int and valid year (within reasonable time - can change to include BC pieces)
     def set_publication_year(self, publication_year):
         current_year = datetime.now().year
         if not isinstance(publication_year, int) or not (1000 <= publication_year <= current_year):
@@ -64,6 +66,7 @@ class Book:
     def get_format(self):
         return self._format
     
+    # constraint checking for valid format inputs 
     def set_format(self, format):
         if format not in ('p', 'd', 'Physical', 'Digital'):
             raise ValueError("Format must be 'p' (physical) or 'd' (digital).")
@@ -78,7 +81,7 @@ class Book:
             raise ValueError("Storage location must be a non-empty string.")
         self._storage_loc = storage_loc
 
-    # display book information
+    # dunder to display book information
     def __str__(self):
         format_display = "Physical" if self.get_format() == 'p' else "Digital"
         storage_loc_display = "Shelf 1" if self.get_storage_loc() == 's1' else "Shelf 2"

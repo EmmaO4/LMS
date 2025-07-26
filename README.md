@@ -21,11 +21,16 @@ Files summary:
 4. LMS.txt
     This file will store books and its relevant information.
 
+5. books_data.sql
+    sql file to use as interface for db inputs 
+
+6. db.db 
+    db file for storage 
+
 Optional Files:
-    cli.py: potential to implement a separate CLI file for navigation.
 
     gui.py: notable options are: Tkinter or PyQt, retrieved via breif browser search. Look into this.
 
-Suggested Data Storage Format:
+Data Storage Format:
 
-    Introduce database -- SQLite for storing data in a meaningful way.
+    Introduce db -- SQLite for storing data in a meaningful way.

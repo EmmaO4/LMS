@@ -1,6 +1,7 @@
 from library import Library
 from book import Book
 
+# main menu
 def display_menu():
     print("-------------\nLMS MAIN MENU \n-------------")
     print("1. Add a Book")

@@ -31,6 +31,11 @@
 -- ('Introduction to Java Programming Comprehensive version 10th Edition', 'Y. Daniel Liang', '978-0-13-376131-3', 2014, 'Computer Science', 'Physical', 'Shelf 2');
 
 -- INSERT INTO books (title, author, isbn, publication_year, genre, format, storage_location) VALUES
--- ('Where Are You When I Need You?', 'Suzanne Newton', '0-670-81702-3', 1991, 'Fiction', 'Physical', 'Shelf 2');
+-- ('Where Are You When I Need You?', 'Suzanne Newton', '0-670-81702-3', 1991, 'Fiction', 'Physical', 'Shelf 1');
+
+-- DELETE FROM books WHERE id = 12;
+
+-- INSERT INTO books (title, author, isbn, publication_year, genre, format, storage_location) VALUES
+-- ('Where Are You When I Need You?', 'Suzanne Newton', '0-670-81702-3', 1991, 'Fiction', 'Physical', 'Shelf 1');
 
 SELECT * FROM books;

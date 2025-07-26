@@ -5,16 +5,17 @@ Function implementation (stuff to fix)
         returns an autofill of the first letter if in library.
         I want to return an autofill of all authors with the current input:
             Ex: type "g" return all "g%" 
+    main.modify 
+        library.modify is alr implemented
 Implement abstract.py for abstract data structure use
     modify LMS.txt file contents = book attributes already in library
     Implement ADTs (BST, dictionary)
     learn implementation
 Keep track of books at home
-Comment functions for ease of readability
 
 -----------
 *Currently Working On*:
-    Normalize DB 
+    Normalizing DB 
     Implementing SQLite DB
         Debug: csv_to_db.py script execution -- prob input manually 
         figure out what the unknown characters are being created in db.db 
@@ -25,12 +26,10 @@ Completed:
     # now reads file data correctly
     main.display_books
         currently prints only the hardcoded data 
-
     # now stores information in LMS.txt file and loads data into shelf list correctly
     Store book information into LMS.txt w/o overwriting
     check if information is the same:
         if so, add only the new data
-
     # Successful implementation:
         libaary.search_title
         library.book_titles
@@ -51,3 +50,7 @@ Completed:
     Implement SQL DB for storage and proper bookkeeping
     choose a DB, maybe SQLite
     # DB is implemented and now executes when running books.sql query
+    # commented on methods
+        Commenting on functions for ease of readability and clarity
+    # library.modify is now implemented 
+        Implementing a libaray.modify method to update data

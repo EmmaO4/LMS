@@ -3,10 +3,10 @@ from book import Book
 import csv
 
 class Library:
-
+    
     def __init__(self):
         self.shelf = []
-        self.load_data()
+        self.load_data()    # auto run when called by constructor in main.py
 
     def add_book(self, book):
         self.shelf.append(book)
@@ -19,12 +19,15 @@ class Library:
                 return
         print(f"Book with title: {title} was not found.")
 
+    # returns comprehension of title after being set to lowercase
     def search_title(self, title):
         return [book for book in self.shelf if title.lower() in book.get_title().lower()]
     
+    # return comprhension of author after being set to lowercase (same as above)
     def search_author(self, author):
         return [book for book in self.shelf if author.lower() in book.get_author().lower()]
 
+    # reads books from library for debugging
     def display_books(self, filename="LMS.csv"):
         for i, book in enumerate(self.shelf, 1):
             print(f"\nBook #{i}")
@@ -47,6 +50,47 @@ class Library:
                 ])
         print(f"Library data saved to {filename}.")
 
+    def modify(self, filename="LMS.csv"):
+        book_to_modify = input("Title of book: ")
+        for book in self.shelf:
+            if book.get_title() == book_to_modify:
+                print(f"{book.get_title()} by {book.get_author()}")
+                attributes = {
+                    "title" : book.get_title,
+                    "author" : book.get_author,
+                    "ibsn" : book.get_isbn,
+                    "year" : book.get_publication_year,
+                    "genre" : book.get_genre,
+                    "format" : book.get_format,
+                    "storage" : book.get_storage_loc
+                }
+
+            attr = input("Attr to modify: ")
+            if attr == "year":
+                attr = "publication_year"
+            elif attr == "storage":
+                attr == "storage_loc"
+
+            if attr in attributes:
+                mod_attr_val = input("New attr value: ")
+    
+                if attr == "publication_year":
+                    try:
+                        mod_attr_val = int(mod_attr_val)
+                    except ValueError:
+                        print("invalid. year must be type int")
+                    
+                setattr(book, f"_{book.__class__.__name__}__{attr}", mod_attr_val)
+                print(f"{attr} updated to: {mod_attr_val}")
+                self.save_to_file(filename)
+                return
+            else:
+                print("Invalid attribute name.")
+                return
+
+        print(f"No book found with title: {book_to_modify}")
+
+    # reads count of library for debugging
     def book_count(self):
         count = len(self.shelf)
         print(f"Number of books in library: {count}")
@@ -60,6 +104,7 @@ class Library:
         except FileNotFoundError:
             print(f"File {filename} not found.")
 
+    # print all stored books by titles
     def book_titles(self):
         for book in self.shelf:
             print(book.get_title())
