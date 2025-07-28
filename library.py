@@ -13,7 +13,7 @@ class Library:
 
     def remove_book(self, title):
         for book in self.shelf:
-            if book.get_title() == title:
+            if book.get_title().lower() == title.lower():
                 self.shelf.remove(book)
                 print(f"'{book.get_title()}' by {book.get_author()} has been removed from library.")
                 return
@@ -53,40 +53,43 @@ class Library:
     def modify(self, filename="LMS.csv"):
         book_to_modify = input("Title of book: ")
         for book in self.shelf:
-            if book.get_title() == book_to_modify:
+            if book.get_title().lower() == book_to_modify.lower():
                 print(f"{book.get_title()} by {book.get_author()}")
+                
                 attributes = {
-                    "title" : book.get_title,
-                    "author" : book.get_author,
-                    "ibsn" : book.get_isbn,
-                    "year" : book.get_publication_year,
-                    "genre" : book.get_genre,
-                    "format" : book.get_format,
-                    "storage" : book.get_storage_loc
+                    "title" : book.set_title,
+                    "author" : book.set_author,
+                    "isbn" : book.set_isbn,
+                    "publication_year" : book.set_publication_year,
+                    "genre" : book.set_genre,
+                    "format" : book.set_format,
+                    "storage_loc" : book.set_storage_loc
                 }
 
-            attr = input("Attr to modify: ")
-            if attr == "year":
-                attr = "publication_year"
-            elif attr == "storage":
-                attr == "storage_loc"
+                print("Attributes you can modify:", ", ".join(attributes.keys()))
+                attr = input("Attr to modify: ")
 
-            if attr in attributes:
-                mod_attr_val = input("New attr value: ")
-    
-                if attr == "publication_year":
-                    try:
-                        mod_attr_val = int(mod_attr_val)
-                    except ValueError:
-                        print("invalid. year must be type int")
-                    
-                setattr(book, f"_{book.__class__.__name__}__{attr}", mod_attr_val)
-                print(f"{attr} updated to: {mod_attr_val}")
-                self.save_to_file(filename)
-                return
-            else:
-                print("Invalid attribute name.")
-                return
+                if attr == "year":
+                    attr = "publication_year"
+                elif attr == "storage":
+                    attr = "storage_loc"
+
+                if attr in attributes:
+                    mod_attr_val = input("New attr value: ")
+        
+                    if attr == "publication_year":
+                        try:
+                            mod_attr_val = int(mod_attr_val)
+                        except ValueError:
+                            print("invalid. year must be type int")
+                        
+                    attributes[attr](mod_attr_val)
+                    print(f"{attr} updated to: {mod_attr_val}")
+                    self.save_to_file(filename)
+                    return
+                else:
+                    print("Invalid attribute name.")
+                    return
 
         print(f"No book found with title: {book_to_modify}")
 
@@ -95,6 +98,7 @@ class Library:
         count = len(self.shelf)
         print(f"Number of books in library: {count}")
 
+    # reads the file as is for debugging
     def read_file(self, filename="LMS.csv"):
         try:
             with open(filename, newline='') as csvfile:

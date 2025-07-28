@@ -37,5 +37,7 @@
 
 -- INSERT INTO books (title, author, isbn, publication_year, genre, format, storage_location) VALUES
 -- ('Where Are You When I Need You?', 'Suzanne Newton', '0-670-81702-3', 1991, 'Fiction', 'Physical', 'Shelf 1');
+-- DELETE FROM books WHERE id = 1;
+-- update books set id = 11 where id = 13;
 
 SELECT * FROM books;

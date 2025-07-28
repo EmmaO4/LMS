@@ -9,9 +9,11 @@ def display_menu():
     print("3. Search Books by Title")
     print("4. Search Books by Author")
     print("5. Display All Books")
-    print("6. Count all Books")
-    print("7. Read File")
-    print("8. Save and Exit\n-------------")
+    print("6. Count All Books")
+    print("7. Modify Book Data")
+    print("8. Read File")
+    print("9. Save and Exit\n-------------")
+    print("0. Exit")
 
 def add_book(library):
     print("\nAdd a Book")
@@ -53,6 +55,10 @@ def search_by_author(library):
     else:
         print("No books found by that author.")
 
+def modifiy(library):
+    print("\nModify Book Data")
+    library.modify()
+
 def count_books(library):
     library.book_count()
 
@@ -82,10 +88,14 @@ def main():
         elif select == "6":
             count_books(library)
         elif select == "7":
-            read_file_main(library)
+            modifiy(library)
         elif select == "8":
+            read_file_main(library)
+        elif select == "9":
             library.save_to_file()
             print("TERMINATED.\n")
+            break
+        elif select == "0":
             break
         else:
             print("Invalid Select")

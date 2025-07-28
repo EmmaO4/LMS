@@ -6,20 +6,21 @@ Function implementation (stuff to fix)
         I want to return an autofill of all authors with the current input:
             Ex: type "g" return all "g%" 
     main.modify 
-        library.modify is alr implemented
+        main.modify. library.modify is alr implemented
+Implementing SQLite DB
+        Debug: csv_to_db.py script execution -- prob input manually 
+        figure out what the unknown characters are being created in db.db 
+        look into database (primary ... etc) keys, constraints ...
 Implement abstract.py for abstract data structure use
     modify LMS.txt file contents = book attributes already in library
     Implement ADTs (BST, dictionary)
     learn implementation
 Keep track of books at home
+    Normalizing DB -- not necessary, currently. Can do for practice
 
 -----------
 *Currently Working On*:
-    Normalizing DB 
-    Implementing SQLite DB
-        Debug: csv_to_db.py script execution -- prob input manually 
-        figure out what the unknown characters are being created in db.db 
-        look into database (primary ... etc) keys, constraints ...
+    Debugging library.modify
     
 -----------
 Completed:
