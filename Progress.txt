@@ -46,7 +46,7 @@
         section after library.modify attributes dictionary creation was not indented properly. fixed
         library.modify "isbn" key was mispelled as "ibsn" for attributes dictionary
         typo in assigning value "storage_loc" to user input "storage". was boolean instead of assign 
-
     Debugging: library.modify
         attributes dictionary vales switched to setter methods of respective attrs
     Updated main LMS intial main menu printout with modify added 
+    Interacted with system to scout for improvements 

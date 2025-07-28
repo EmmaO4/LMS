@@ -69,6 +69,7 @@ class Library:
                 print("Attributes you can modify:", ", ".join(attributes.keys()))
                 attr = input("Attr to modify: ")
 
+                # not necessary if user inputs exact key syntax
                 if attr == "year":
                     attr = "publication_year"
                 elif attr == "storage":
