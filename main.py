@@ -12,8 +12,8 @@ def display_menu():
     print("6. Count All Books")
     print("7. Modify Book Data")
     print("8. Read File")
-    print("9. Save and Exit\n-------------")
-    print("0. Exit")
+    print("9. Save and Exit")
+    print("0. Exit\n-------------")
 
 def add_book(library):
     print("\nAdd a Book")
