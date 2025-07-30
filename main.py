@@ -55,7 +55,7 @@ def search_by_author(library):
     else:
         print("No books found by that author.")
 
-def modifiy(library):
+def modify(library):
     print("\nModify Book Data")
     library.modify()
 
@@ -88,7 +88,7 @@ def main():
         elif select == "6":
             count_books(library)
         elif select == "7":
-            modifiy(library)
+            modify(library)
         elif select == "8":
             read_file_main(library)
         elif select == "9":

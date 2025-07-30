@@ -1,29 +1,32 @@
 LMS NOW ACTIVE -- will input all books in home for bookkeeping.
 
-Function implementation (stuff to fix)
-    main.search_author
-        returns an autofill of the first letter if in library.
-        I want to return an autofill of all authors with the current input:
-            Ex: type "g" return all "g%" 
-    main.modify 
-        main.modify. library.modify is alr implemented
-Implementing SQLite DB
-        Debug: csv_to_db.py script execution -- prob input manually 
-        figure out what the unknown characters are being created in db.db 
-        look into database (primary ... etc) keys, constraints ...
-Implement abstract.py for abstract data structure use
-    modify LMS.txt file contents = book attributes already in library
-    Implement ADTs (BST, dictionary) for searching (for fun and practice)
-    learn implementation
-Keep track of books at home
+Docket:
+    Function implementation (stuff to fix)
+        main.search_author
+            returns an autofill of the first letter if in library.
+            I want to return an autofill of all authors with the current input:
+                Ex: type "g" return all "g%" 
+        add user login for separate user interaction (i.e.: user1, user2...)
+            practice rest api maybe?
+        add a cancel main select option for if user changes mind -> return to main select
+        abstract.py for abstract data structure use
+        Implement ADTs (BST, dictionary) for searching (for fun and practice)
+            learn implementation
+        auto run sql insert into books table command when adding book to library
+        auto save after adding/deleting from library 
+    Debug: library.modify
+    Keep track of books at home
     Normalizing DB -- not necessary, currently. Can do for practice
 
 -----------
 *Currently Working On*:
     Debug:
-        library.modify
-    main select 8 reads unformatted user inputted information for attrs: format, storage_loc
-        not parsing/ reading file correctly? 
+        # books being added to libary are not formating attrs: format, storage_loc
+            library.add/ library.load_data?
+                main select 1: add book doesnt format attrs: format, storage_loc  
+                    main select 8 reads unformatted user inputted information for attrs: format, storage_loc
+                        not parsing/ reading file correctly? -- solved: reading file purely 
+                main.display_all_books: returns enumerated books with properly formatted attrs: format, storage_loc               
     
 -----------
 Completed:
@@ -50,6 +53,7 @@ Completed:
     # now formatted for sql implementation using csv files
     reformat LMS.txt to LMS.csv for data parsing for future DB implementation
     Convert content storage to CSV file 
+        modify LMS.txt file contents = book attributes already in library
     # SQLite successfully ran and created test table with constaint
     Implement SQL DB for storage and proper bookkeeping
     choose a DB, maybe SQLite
@@ -58,3 +62,12 @@ Completed:
         Commenting on functions for ease of readability and clarity
     # library.modify is now implemented 
         Implementing a libaray.modify method to update data
+        main.modify 
+            main.modify, library.modify is alr implemented
+
+-----------
+Discarded:
+    Implementing SQLite DB
+        Debug: csv_to_db.py script execution -- prob input manually 
+        figure out what the unknown characters are being created in db.db 
+        look into database (primary ... etc) keys, constraints ...

@@ -39,14 +39,21 @@ class Library:
             writer = csv.writer(csvfile)
             writer.writerow(["Title", "Author", "ISBN", "Publication Year", "Genre", "Format", "Storage Location"])
             for book in self.shelf:
+                format_display = "Physical" if book.get_format() in ("p", "physical") else "Digital"
+            
+                storage_display = {
+                    "s1": "Shelf 1",
+                    "s2": "Shelf 2"
+                }.get(book.get_storage_loc().lower(), book.get_storage_loc())
+                
                 writer.writerow([
                     book.get_title(),
                     book.get_author(),
                     book.get_isbn(),
                     book.get_publication_year(),
                     book.get_genre(),
-                    book.get_format(),
-                    book.get_storage_loc()
+                    format_display,
+                    storage_display
                 ])
         print(f"Library data saved to {filename}.")
 
@@ -120,13 +127,13 @@ class Library:
                 reader = csv.DictReader(csvfile)
                 for row in reader:
                     book = Book(
-                        title=row["Title"],
-                        author=row["Author"],
-                        isbn=row["ISBN"],
-                        publication_year=int(row["Publication Year"]),
-                        genre=row["Genre"],
-                        format=row["Format"],
-                        storage_loc=row["Storage Location"]
+                        title = row["Title"],
+                        author = row["Author"],
+                        isbn = row["ISBN"],
+                        publication_year = int(row["Publication Year"]),
+                        genre = row["Genre"],
+                        format = row["Format"],
+                        storage_loc = row["Storage Location"]
                     )
                     self.shelf.append(book)
             print(f"Successfully loaded {len(self.shelf)} books from {filename}.")

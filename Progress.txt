@@ -27,12 +27,10 @@
 7.12.25
     Aborting script csv_to_db -- Starting over with SQLite: manually inputted tables in placeholder file: books_data.sql
     Was able to post output on SQLite table by running query on books relation
-
 7.18.25
     SQLite DB is active when using books_data.sql -> run insert functions > comment out INSERTs and run SELECT
     mysql.sql is redundant 
     Performed queries to test DB
-
 7.26.25
     Corrected CSV file for entry id = 12, shelf = 1
     Updated TDDO to include a modify method when needing to modify an aspect of the data saved
@@ -40,7 +38,6 @@
     Added comments - library.py, book.py, main.py where necessary
     Updated README
     Implemented method library.modify
-
 7.28.25
     Debug: 
         section after library.modify attributes dictionary creation was not indented properly. fixed
@@ -50,9 +47,12 @@
         attributes dictionary vales switched to setter methods of respective attrs
     Updated main LMS intial main menu printout with modify added 
     Interacted with system to scout for improvements 
-
-7.29.24
+7.29.25
     Separated save/exit in main.display_menu for concurrent working instead of exiting the program when wanting to save 
     More quality testing 
         interacting with program as I would intend new users to
+7.30.25
+    Debug: 
+        library.save_to_file was saving the direct user input for attributes: format, storage_loc
+            created format normalization within the method to format input before appending to library
     
