@@ -12,7 +12,6 @@ def display_menu():
     print("6. Count All Books")
     print("7. Modify Book Data")
     print("8. Read File")
-    print("9. Save")
     print("0. Exit\n-------------")
 
 def add_book(library):
@@ -91,8 +90,6 @@ def main():
             modify(library)
         elif select == "8":
             read_file_main(library)
-        elif select == "9":
-            library.save_to_file()
         elif select == "0":
             print("TERMINATED.\n")
             break

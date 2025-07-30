@@ -55,4 +55,6 @@
     Debug: 
         library.save_to_file was saving the direct user input for attributes: format, storage_loc
             created format normalization within the method to format input before appending to library
+    created file data_snapshot to manually back up data in case of something going cattywampus 
+    now auto saves after adding/deleting from library   
     

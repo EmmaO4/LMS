@@ -10,14 +10,16 @@ class Library:
 
     def add_book(self, book):
         self.shelf.append(book)
+        self.save_to_file()
 
     def remove_book(self, title):
         for book in self.shelf:
             if book.get_title().lower() == title.lower():
                 self.shelf.remove(book)
                 print(f"'{book.get_title()}' by {book.get_author()} has been removed from library.")
-                return
+#                return
         print(f"Book with title: {title} was not found.")
+        self.save_to_file()
 
     # returns comprehension of title after being set to lowercase
     def search_title(self, title):
