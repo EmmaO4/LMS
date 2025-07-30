@@ -50,3 +50,9 @@
         attributes dictionary vales switched to setter methods of respective attrs
     Updated main LMS intial main menu printout with modify added 
     Interacted with system to scout for improvements 
+
+7.29.24
+    Separated save/exit in main.display_menu for concurrent working instead of exiting the program when wanting to save 
+    More quality testing 
+        interacting with program as I would intend new users to
+    
