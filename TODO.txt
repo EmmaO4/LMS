@@ -16,9 +16,10 @@ Docket:
     Normalizing DB -- not necessary, currently. Can do for practice
 
 -----------
-*Currently Working On*:
-    add a cancel main select option for if user changes mind -> return to main select      
+*Currently Working On*:      
     auto run sql insert into books table command when adding book to library    
+    debug: 
+        main.add_book -- doesn't accept input
     
 -----------
 Completed:
@@ -65,6 +66,8 @@ Completed:
                 main.display_all_books: returns enumerated books with properly formatted attrs: format, storage_loc  
     # now saves after running methods libary.add_book, library.remove_book
         auto save after adding/deleting from library   
+    # main.add_book, main.remove_book now have the option to cancel operation if user selects to
+        add a cancel main select option for if user changes mind -> return to main select
 
 -----------
 Discarded:

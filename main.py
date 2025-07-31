@@ -15,23 +15,61 @@ def display_menu():
     print("0. Exit\n-------------")
 
 def add_book(library):
-    print("\nAdd a Book")
-    title               = input("Title: ")
-    author              = input("Author: ")
-    isbn                = input("ISBN: ")
-    publication_year    = int(input("Publication year: "))
-    genre               = input("Genre: ")
-    format              = input("Format (p/d): ")
-    storage_loc         = input("Storage location: ")
+    # helper function to determine curr user input to cancel add book operation early
+    def sub_select(select):
+        value = input(f"{select}: ")
+        if value == "0":
+            print("Book entry cancelled.")
+            return None
+        
+    print("\nAdd a Book\n(0. Cancel)")
+    title = sub_select("Title")
 
+    if title is None: 
+        return
+    author = sub_select("Author")
+    if author is None: 
+        return
+    isbn = sub_select("ISBN")
+    if isbn is None: 
+        return
+    pub_year = sub_select("Publication Year")
+    if pub_year is None: 
+        return
+    try:
+        publication_year = int(pub_year)
+    except ValueError:
+        print("Invalid year. Entry cancelled.")
+        return
+    genre = sub_select("Genre")
+    if genre is None: 
+        return
+    format = sub_select("Format (p/d)")
+    if format is None: 
+        return
+    storage_loc = sub_select("Storage Location")
+    if storage_loc is None: 
+        return
+    
     book = Book(title, author, isbn, publication_year, genre, format, storage_loc)
     library.add_book(book)
     print(f"'{title}' has been added.")
 
 def remove_book(library):
+    # helper method to quit function mid-action
+    def sub_select(select): 
+        value = input(f"{select}")
+        if value == "0":
+            print("Remove book cancelled.")
+            return None
+        else:
+            return value
+    print("Remove Book\n(0. Cancel)")
     print("\nBooks in library:")
     library.book_titles()
-    title = input("Enter book title to remove: ")
+    title = sub_select("Enter book title to remove: ")
+    if title == None:
+        return
     library.remove_book(title)
 
 def search_by_title(library):

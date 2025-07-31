@@ -1,5 +1,7 @@
 # this file stores book info into a csv file using lists
+# book logic
 from book import Book
+from csv_to_db import migrate_csv_to_db
 import csv
 
 class Library:
@@ -11,6 +13,7 @@ class Library:
     def add_book(self, book):
         self.shelf.append(book)
         self.save_to_file()
+        migrate_csv_to_db()
 
     def remove_book(self, title):
         for book in self.shelf:

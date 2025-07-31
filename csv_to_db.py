@@ -1,8 +1,9 @@
 # script to migrate all csv data into db
+# db logic 
 import sqlite3
 import csv
 
-def migrate_csv_to_db(csv_file="LMS.csv", db_file="db.db", schema_file="mysql.sql"):
+def migrate_csv_to_db(csv_file="LMS.csv", db_file="db.db", schema_file="books_data.sql"):
     # connect to SQLite DB
     conn = sqlite3.connect(db_file)
     cur = conn.cursor()
