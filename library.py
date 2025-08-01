@@ -13,7 +13,7 @@ class Library:
     def add_book(self, book):
         self.shelf.append(book)
         self.save_to_file()
-        migrate_csv_to_db()
+        # migrate_csv_to_db()
 
     def remove_book(self, title):
         for book in self.shelf:
@@ -61,6 +61,7 @@ class Library:
                     storage_display
                 ])
         print(f"Library data saved to {filename}.")
+        migrate_csv_to_db(filename) # db sync
 
     def modify(self, filename="LMS.csv"):
         book_to_modify = input("Title of book: ")

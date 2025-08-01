@@ -12,6 +12,9 @@ def migrate_csv_to_db(csv_file="LMS.csv", db_file="db.db", schema_file="books_da
     with open(schema_file, "r") as schema:
         cur.executescript(schema.read())
 
+    cur.execute("DELETE FROM books")
+    cur.execute("DELETE FROM sqlite_sequence WHERE name='books'")
+
     # open csv and insert rows
     with open(csv_file, newline='', encoding='utf-8') as csvfile:
         reader = csv.DictReader(csvfile)

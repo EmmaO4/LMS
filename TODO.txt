@@ -1,26 +1,28 @@
 LMS NOW ACTIVE -- will input all books in home for bookkeeping.
 
 Docket:
-    Function implementation (stuff to fix)
-        main.search_author
-            returns an autofill of the first letter if in library.
-            I want to return an autofill of all authors with the current input:
-                Ex: type "g" return all "g%" 
-        add user login for separate user interaction (i.e.: user1, user2...)
-            practice rest api maybe?
-        abstract.py for abstract data structure use
-        Implement ADTs (BST, dictionary) for searching (for fun and practice)
+    High Prio:
+        
+    Low Prio:
+        Debug: 
+            library.modify
+                accepts any new attr value as input. Must normalize format  
             learn implementation
-    Debug: library.modify
-    Keep track of books at home
-    Normalizing DB -- not necessary, currently. Can do for practice
+        Function implementation (stuff to fix)
+            main.search_author
+                returns an autofill of the first letter if in library.
+                I want to return an autofill of all authors with the current input:
+                    Ex: type "g" return all "g%" 
+            add user login for separate user interaction (i.e.: user1, user2...)
+                practice rest api maybe?
+            abstract.py for abstract data structure use
+            Implement ADTs (BST, dictionary) for searching (for fun and practice)
+        Normalizing DB -- not necessary, currently. Can do for practice
 
 -----------
 *Currently Working On*:      
-    auto run sql insert into books table command when adding book to library    
-    debug: 
-        main.add_book -- doesn't accept input
-    
+    LFW
+
 -----------
 Completed:
     # now reads file data correctly
@@ -68,6 +70,16 @@ Completed:
         auto save after adding/deleting from library   
     # main.add_book, main.remove_book now have the option to cancel operation if user selects to
         add a cancel main select option for if user changes mind -> return to main select
+    # main.add_book now functions correctly. 
+        debug: 
+            main.add_book -- doesn't accept input
+            sovled: helper method was not returning user inputted value so main.add_book method exited prematurely 
+    # now updates db concurrently (check via books_data.sql: Run Query)
+        Debug:
+        auto run sql insert into books table command when adding book to library
+        bug: every time program is ran, sql inserts are appended to db  
+            solved: added a DELETE statement in csv_to_db.py after loading schema to remove duplicates + DELETE FROM sqlite_sequence to auto-increment starting from 1
+
 
 -----------
 Discarded:

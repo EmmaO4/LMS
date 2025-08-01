@@ -58,4 +58,9 @@
     created file data_snapshot to manually back up data in case of something going cattywampus 
     now auto saves after adding/deleting from library
     main.add_book, main.remove_book now have the option to cancel operation if user selects to do so 
-    
+7.31.25
+    Debug:
+        main.add_book now accepts user input for adding attributes to book for purposes of appending to library
+    Fixed by adding a DELETE statement in csv_to_db.py after loading schema to check n remove duplicates. db now loads correct data
+    Added a DELETE statement in csv_to_db.py after loading schema to remove duplicates + DELETE FROM sqlite_sequence to auto-increment starting from 1 (check via books_data.sql: Run Query)
+    Moved execution of library.migrate_csv_to_db from after libary.save_to_file to inside method libary.save_to_file for better modularity and db syncing. I think this is the correct way as well      

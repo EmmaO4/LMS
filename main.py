@@ -21,6 +21,8 @@ def add_book(library):
         if value == "0":
             print("Book entry cancelled.")
             return None
+        else:
+            return value
         
     print("\nAdd a Book\n(0. Cancel)")
     title = sub_select("Title")
