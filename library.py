@@ -24,14 +24,30 @@ class Library:
         print(f"Book with title: {title} was not found.")
         self.save_to_file()
 
-    # returns comprehension of title after being set to lowercase
     def search_title(self, title):
-        return [book for book in self.shelf if title.lower() in book.get_title().lower()]
-    
-    # return comprhension of author after being set to lowercase (same as above)
-    def search_author(self, author):
-        return [book for book in self.shelf if author.lower() in book.get_author().lower()]
+        # returns comprehension of title after being set to lowercase
+        # return [book for book in self.shelf if title.lower() in book.get_title().lower()]
+        ret = []
+        for book in self.shelf:
+            if title.lower() in book.get_title().lower().split(): # match whole words
+                ret.append(book) 
+        if not ret:
+            return None
+        else:
+            return ret
 
+    def search_author(self, author):
+        # return comprhension of author after being set to lowercase (same as above)
+        # return [book for book in self.shelf if author.lower() in book.get_author().lower()]
+        ret = []
+        for book in self.shelf:
+            if author.lower() in book.get_author().lower().split(): # match whole words
+                ret.append(book) 
+        if not ret:
+            return None
+        else:
+            return ret
+        
     # reads books from library for debugging
     def display_books(self, filename="LMS.csv"):
         for i, book in enumerate(self.shelf, 1):
@@ -142,7 +158,7 @@ class Library:
                         storage_loc = row["Storage Location"]
                     )
                     self.shelf.append(book)
-            print(f"Successfully loaded {len(self.shelf)} books from {filename}.")
+            print(f"Loaded {len(self.shelf)} books from {filename}.")
         except FileNotFoundError:
             print(f"WARNING: {filename} not found. Starting with an empty library.")
         except Exception as e:

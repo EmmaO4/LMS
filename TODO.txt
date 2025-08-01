@@ -3,16 +3,8 @@ LMS NOW ACTIVE -- will input all books in home for bookkeeping.
 Docket:
     High Prio:
         
-    Low Prio:
-        Debug: 
-            library.modify
-                accepts any new attr value as input. Must normalize format  
-            learn implementation
-        Function implementation (stuff to fix)
-            main.search_author
-                returns an autofill of the first letter if in library.
-                I want to return an autofill of all authors with the current input:
-                    Ex: type "g" return all "g%" 
+    Low Prio:  
+        Function implementation (stuff to fix/add)
             add user login for separate user interaction (i.e.: user1, user2...)
                 practice rest api maybe?
             abstract.py for abstract data structure use
@@ -21,7 +13,9 @@ Docket:
 
 -----------
 *Currently Working On*:      
-    LFW
+    Debug: 
+        library.modify
+            accepts any new attr value as input. Must normalize format
 
 -----------
 Completed:
@@ -79,7 +73,11 @@ Completed:
         auto run sql insert into books table command when adding book to library
         bug: every time program is ran, sql inserts are appended to db  
             solved: added a DELETE statement in csv_to_db.py after loading schema to remove duplicates + DELETE FROM sqlite_sequence to auto-increment starting from 1
-
+    # now returns all books matching user inputted strings or string sequences
+    main.search_title, main.search_author
+        returns an autofill of the first letter if in library.
+        I want to return an autofill of all authors with the current input:
+            Ex: type "g" return all "g%" 
 
 -----------
 Discarded:

@@ -78,9 +78,9 @@ def search_by_title(library):
     title = input("Search Title: ")
     results = library.search_title(title)
     if results:
-        print("\nSEARCH RESULTS:")
+        print("\nSEARCH RESULTS:\n")
         for book in results:
-            print(book)
+            print(book, "\n")
     else:
         print("No books found with that title.")
 
@@ -88,9 +88,9 @@ def search_by_author(library):
     author = input("Search Author: ")
     results = library.search_author(author)
     if results:
-        print("\nRESULTS:")
+        print("\nSEARCH RESULTS:\n")
         for book in results:
-            print(book)
+            print(book, "\n")
     else:
         print("No books found by that author.")
 

@@ -64,3 +64,9 @@
     Fixed by adding a DELETE statement in csv_to_db.py after loading schema to check n remove duplicates. db now loads correct data
     Added a DELETE statement in csv_to_db.py after loading schema to remove duplicates + DELETE FROM sqlite_sequence to auto-increment starting from 1 (check via books_data.sql: Run Query)
     Moved execution of library.migrate_csv_to_db from after libary.save_to_file to inside method libary.save_to_file for better modularity and db syncing. I think this is the correct way as well      
+8.1.25
+    Changed library.search_title, library.search_author to use standard search method instead of list comprehension to check if user input matches a word or more in title. 
+        reason: 
+            time complexity is negligible with very small db (current entries: 12) extra space created using temp list
+            easier for me to understand
+    Did some more debug scouting 
